@@ -1,0 +1,193 @@
+body{
+    font-family: monospace;
+    background:  #eaeaea;   
+}
+
+h1{
+    color: #094944;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a{
+    color:#7a28b5;
+}
+ 
+
+p{
+    color: #091d26;
+    font-size: 1rem;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*HEADER*/
+
+.header-container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    font-family:  'Courier New', Courier, monospace, monospace;
+}
+
+.header-name{
+    justify-content: flex-start;
+    text-transform: lowercase;
+    font-size: 2rem;
+}
+
+/*LINKS*/
+
+.header-container ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+.header-container ul li{
+    margin-right: 20px;
+}
+
+.header-links li img{
+    width: 24px; 
+    height: 24px; 
+}
+
+/*NAV*/
+
+.main-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around; 
+    gap: 40px;
+    list-style: none;
+    text-transform: lowercase;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+.nav ul a{
+    text-decoration: none;
+}
+
+.nav li:hover {
+    text-decoration: line-through;
+    font-style: oblique;
+}
+  
+
+/*MAIN INDEX*/
+
+.main{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding: 10px;
+    margin: 10px;
+}
+
+    
+.image{
+    flex: 1; 
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; 
+}
+
+.intro{
+    flex: 1;
+    text-indent: 15px;
+} 
+
+/*MAIN PORTFOLIO*/
+
+.empty{
+    flex: 1;
+}
+
+.projects{
+    display: flex;
+    flex: 0.5;
+    flex-direction: column;
+
+    height: 100%;
+    text-align: right;
+
+    padding: 10px;
+    margin: 10px;
+}
+
+.project-name:hover{
+    text-decoration: line-through;
+    font-style: oblique;
+}
+
+.project-status{
+    font-style: italic;}
+
+
+    /*MAIN CONTACT*/
+
+.contact-me {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-end; 
+    min-height: 100%;
+    text-align: right;
+    padding: 10px;
+    margin: 10px;
+}
+
+.contact-me ul{
+    list-style: none;
+}
+
+.contact-me ul a{
+    text-decoration: none;
+    font-size: inherit;
+}
+
+.contact-me li a:hover{
+    text-decoration: line-through;
+    font-style: oblique;
+}
+
+/*FOOTER*/
+
+.footer{  
+    padding: 10px;
+    font-size: 10px;
+    font-style: italic;
+    margin-top: auto;
+}
+
+/*BUTTON*/
+
+.button{
+  border: 3px solid;
+  padding: 5px 10px;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+}
+
+.button:active{
+  top: 5px;
+  left: 5px;
+}
+
