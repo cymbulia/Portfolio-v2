@@ -1,24 +1,24 @@
 body{
-    font-family: monospace;
     background:  #eaeaea;   
 }
-
-h1{
-    color: #094944;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-a{
-    color:#7a28b5;
-}
- 
 
 p{
     color: #091d26;
     font-size: 1rem;
+    line-height: 1.5em;
+    font-family: 'Slabo 27px', monospace, sans-serif;
 }
 
+h1{
+    color: #094944;
+    font-family: 'Ultra', Courier, monospace;
+}
 
+a{
+    color:#7a28b5;
+    font-family: 'ultra';
+}
+ 
 .container{
     display: flex;
     flex-direction: column;
@@ -33,101 +33,63 @@ p{
     align-items: center;
     padding: 10px;
     margin: 10px;
-    font-family:  'Courier New', Courier, monospace, monospace;
 }
 
 .header-name{
-    justify-content: flex-start;
-    text-transform: lowercase;
     font-size: 2rem;
-}
-
-/*LINKS*/
-
-.header-container ul{
-    display: flex;
-    justify-content: flex-end;
-    list-style-type: none;
-}
-
-.header-container ul li{
-    margin-right: 20px;
-}
-
-.header-links li img{
-    width: 24px; 
-    height: 24px; 
 }
 
 /*NAV*/
 
-.main-container{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-
 .nav ul{
     display: flex;
-    flex-direction: column;
-    justify-content:space-around; 
+    flex-direction: row;
+    justify-content:space-between; 
     gap: 40px;
     list-style: none;
     text-transform: lowercase;
-    text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     padding: 10px;
     margin: 10px;
 }
-
 
 .nav ul a{
     text-decoration: none;
 }
 
+
 .nav li:hover {
     text-decoration: line-through;
     font-style: oblique;
 }
-  
 
-/*MAIN INDEX*/
+/*MAIN*/
 
 .main{
     display: flex;
     flex-direction: row;
-    flex: 1;
     padding: 10px;
     margin: 10px;
 }
-
-    
-.image{
-    flex: 1; 
-    max-width: 100%;
-    height: auto;
-    object-fit: cover; 
-}
-
-.intro{
-    flex: 1;
-    text-indent: 15px;
-} 
-
-/*MAIN PORTFOLIO*/
 
 .empty{
     flex: 1;
 }
 
+/*MAIN INDEX*/
+ 
+.intro{
+    flex: 1;
+    text-indent: 24px;
+} 
+
+/*MAIN PORTFOLIO*/
+
 .projects{
     display: flex;
-    flex: 0.5;
     flex-direction: column;
-
     height: 100%;
     text-align: right;
-
     padding: 10px;
     margin: 10px;
 }
@@ -141,7 +103,7 @@ p{
     font-style: italic;}
 
 
-    /*MAIN CONTACT*/
+/*MAIN CONTACT*/
 
 .contact-me {
     display: flex;
@@ -152,6 +114,8 @@ p{
     text-align: right;
     padding: 10px;
     margin: 10px;
+    text-indent: 24px;
+
 }
 
 .contact-me ul{
@@ -163,10 +127,51 @@ p{
     font-size: inherit;
 }
 
+.contact-me ul li{
+    line-height: 2em;
+}
+
 .contact-me li a:hover{
     text-decoration: line-through;
     font-style: oblique;
 }
+
+input{
+    color: #091d26;
+    font-family: 'Slabo 27px', monospace, sans-serif;
+}
+
+/*FOOTER*/
+
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright{
+    justify-content: flex-start;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.footer-container ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+.footer-container ul li{
+    margin-right: 20px;
+}
+
+.footer-links li img{
+    width: 24px; 
+    height: 24px; 
+}
+
 
 /*FOOTER*/
 
@@ -177,6 +182,15 @@ p{
     margin-top: auto;
 }
 
+.footer-links img {
+    transition: transform 0.5s;
+}
+
+.footer-links ul li a:hover img {
+    transform: scale(1.3);
+}
+
+
 /*BUTTON*/
 
 .button{
@@ -186,8 +200,94 @@ p{
   position: relative;
 }
 
+.button:hover{
+    font-style: italic;
+}
+
 .button:active{
   top: 5px;
   left: 5px;
+}
+
+/*Responsiveness*/
+
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav ul{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        font-size: 0.9em;
+        margin: 0px;
+    }
+
+
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .header-name {
+        font-size: 1em; 
+    }
+
+    .header-links ul {
+        justify-content: center; 
+    }
+
+    .header-links ul li {
+        margin: 0px 30px 0px;
+        max-width: fit-content;
+        overflow: hidden;
+    }
+
+    .header-links li img{
+        width: 20px;
+        height: 20px;
+    }
+
+
+    .empty {
+        display: none;
+    }
+
+    .main{
+        justify-content: flex-end; 
+
+    }
+
+    p, .project-name, .project-description, input{
+        font-size: 0.9em;
+    }
+
+    input{
+        font-size: 0.9em;
+    }
+}
+
+/*SMALL SCREENS*/
+
+@media screen and (max-width: 320px) {
+    .nav ul{
+        flex-direction: column;
+    }
+    
+    .main{
+        justify-content: center;
+        
+    }
+
+    p, .project-name, .project-description, .contact-me ul li {
+        font-size: 0.9em;
+    }
+
+    .project-name, .project-description, .contact-me ul li {
+        text-align: center;
+    }
 }
 
